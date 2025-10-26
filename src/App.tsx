@@ -69,6 +69,7 @@ function App() {
     setValue(event.target.value);
   };
   return (
+    //use material ui theming
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Fixed5x5GridCompass positionDirectionProps={posirtionDirectionProps} />
