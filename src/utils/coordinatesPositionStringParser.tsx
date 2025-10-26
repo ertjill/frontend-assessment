@@ -22,7 +22,7 @@ export const coordinatesPositionStringParser = (input: string): ParsedInput => {
     if (Number.isNaN(x) || Number.isNaN(y)) {
         throw new Error('x and y must be valid numbers.');
     }
-
+    //Check if x and y are within the grid
     if (x < 0 || x > 4 || y < 0 || y > 4) {
         throw new Error('x and y must be between 0 and 4.');
     }
