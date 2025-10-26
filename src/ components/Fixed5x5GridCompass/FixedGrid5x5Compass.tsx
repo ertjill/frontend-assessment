@@ -8,7 +8,16 @@ import Alert from '@mui/material/Alert';
 import type { Grid5x5CompassProps } from './Fixed.types';
 import { coordinatesPositionStringParser } from '../../utils/coordinatesPositionStringParser';
 
-export default function Fixed5x5GridCompass({ positionDirectionProps = '2,2 NORTH' }) {
+
+
+
+interface Props {
+  /** String input of position and direction format like '2,2 NORTH' */ 
+  positionDirectionProps: string;
+}
+
+/** Fixed 5x5 Grid Compass  */ 
+export default function Fixed5x5GridCompass({  positionDirectionProps = '2,2 NORTH' } : Props) {
   const [positionDirection, setPositionDirection] = useState<Grid5x5CompassProps>({});
   const [error, setError] = useState<string | null>(null);
   const [snackbarOpen, setSnackbarOpen] = useState(false);
